@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Home() {
+export default function Upload() {
   const [file, setFile] = useState(null);
   const [message, setMessage] = useState("");
 
@@ -17,7 +17,7 @@ export default function Home() {
     const formData = new FormData();
     formData.append("file", file);
 
-    const response = await fetch("/api/v1/upload/index.js", {
+    const response = await fetch("/api/v1/upload/", {
       method: "POST",
       body: formData,
     });
